@@ -595,7 +595,7 @@
             <div class="hero-meta">
                 <div class="hero-meta-item">
                     <i data-lucide="calendar" style="width:18px;height:18px;"></i>
-                    2024 年深度解析
+                    2026 年深度解析
                 </div>
                 <div class="hero-meta-item">
                     <i data-lucide="clock" style="width:18px;height:18px;"></i>
@@ -656,6 +656,18 @@
 
             <div class="formula-block">
                 lim<sub>T→0</sub> Softmax(z<sub>i</sub>/T) = { 1 if i = argmax(z), 0 otherwise }
+            </div>
+
+            <div class="highlight-box warning" style="margin: 1.5rem 0;">
+                <div class="highlight-box-header">
+                    <i data-lucide="message-circle" style="width:20px;height:20px;color:var(--accent-amber);"></i>
+                    大白話解釋
+                </div>
+                <p style="margin:0;">
+                    想像你在猜「下一個字」的遊戲。<strong>普通的 AI</strong> 就像是說：「可能是 A (30%)、B (25%)、C (20%)、D (15%)...」給你一堆選項。
+                    但<strong>極致精準的 AI</strong> 就像是學霸考試：「答案就是 A (100%)，其他都是 0%」——完全確定，沒有猶豫。
+                    這就是「狄拉克 δ 函數」的意思：<strong>把所有機率集中在唯一正確答案上，其他全部歸零</strong>。
+                </p>
             </div>
 
             <div class="cards-grid">
@@ -824,7 +836,7 @@
 
             <p>
                 要把「大模型」當作「機率壓縮器」並應用在 Claude Code 中，關鍵在於如何控制 <strong>Context Window（上下文視窗）</strong>的「信噪比」。
-                如果你的 Context 裡塞滿了網路上那 99% 的平庸代碼，Claude 就會預測出平庸的結果。我們要強制它只看那 1% 的「神級操作」。
+                如果你的 Context 裡塞滿了網路上那 99% 的平庸程式碼，Claude 就會預測出平庸的結果。我們要強制它只看那 1% 的「神級操作」。
             </p>
 
             <div class="highlight-box warning">
@@ -909,10 +921,18 @@
 
                 <div class="code-block">
 <span class="comment"># 實作 HFT 功能時，必須嚴格執行【四步推理】：</span>
-<span class="number">1.</span> 【記憶體分析】列出所有變數的擁有權 (Ownership) 流動
-<span class="number">2.</span> 【延遲分析】計算時間複雜度，標註是否有 System Call
-<span class="number">3.</span> 【失敗模式】列舉 3 種可能的 Panic 場景並給出防禦代碼
-<span class="number">4.</span> 【程式碼生成】最後才輸出 Rust 代碼
+
+<span class="number">1.</span> 【記憶體分析】
+   列出所有變數的擁有權 (Ownership) 流動
+
+<span class="number">2.</span> 【延遲分析】
+   計算時間複雜度，標註是否有 System Call
+
+<span class="number">3.</span> 【失敗模式】
+   列舉 3 種可能的 Panic 場景並給出防禦程式碼
+
+<span class="number">4.</span> 【程式碼生成】
+   最後才輸出 Rust 程式碼
                 </div>
 
                 <p><strong>壓縮哲學：</strong>壓縮的是「專家的方法論」，讓模型複製高智商的運作模式。</p>
@@ -1055,7 +1075,7 @@
                 <div class="code-block">
 <span class="comment"># 觸發詞庫範例</span>
 偵測到 <span class="string">"claim"</span> (理賠) → 載入 Insurance_Logic.md → <span class="string">"Agent"</span> 坍縮為「業務員」
-偵測到 <span class="string">"LLM"</span> → 載入 AI_Architecture.md → <span class="string">"Agent"</span> 坍縮為「自主智能體」
+偵測到 <span class="string">"LLM"</span> → 載入 AI_Architecture.md → <span class="string">"Agent"</span> 坍縮為「自主代理人」
                 </div>
             </div>
 
@@ -1253,12 +1273,18 @@ Final_Context = Base_Prompt
             <div class="highlight-box success" style="margin-top:2rem;">
                 <div class="highlight-box-header">
                     <i data-lucide="rocket" style="width:20px;height:20px;color:var(--accent-emerald);"></i>
-                    總結行動指南
+                    總結行動指南：從 How to Do 到 How to Evolve
                 </div>
+                <p style="margin-bottom:1.5rem;color:var(--text-primary);">
+                    <strong>核心轉變：</strong>與其教導 AI「如何做」(How to Do)，不如搭建讓它「如何進化」(How to Evolve) 的有機成長環境，
+                    以及「如何評估」(How to Evaluate) 的成長評估機制。
+                </p>
                 <ul class="styled-list" style="margin-bottom:0;">
                     <li><i data-lucide="check" style="width:18px;height:18px;"></i><div><strong>少寫規則（Less Prompting）：</strong>不要試圖用文字教會它物理學。</div></li>
-                    <li><i data-lucide="check" style="width:18px;height:18px;"></i><div><strong>多給數據（More Context）：</strong>直接把現有的「好代碼」餵給它，讓它自己去擬合那個分佈。</div></li>
+                    <li><i data-lucide="check" style="width:18px;height:18px;"></i><div><strong>多給數據（More Context）：</strong>直接把現有的「好程式碼」餵給它，讓它自己去擬合那個分佈。</div></li>
                     <li><i data-lucide="check" style="width:18px;height:18px;"></i><div><strong>建立回饋（Feedback Loop）：</strong>讓錯誤成為養分，像梯度下降一樣不斷優化系統的表現。</div></li>
+                    <li><i data-lucide="sprout" style="width:18px;height:18px;"></i><div><strong>打造進化環境（How to Evolve）：</strong>設計自我迭代系統，讓 AI 從每次互動中學習、從失敗中成長，建立持續優化的有機循環，而非一次性的指令執行。</div></li>
+                    <li><i data-lucide="chart-line" style="width:18px;height:18px;"></i><div><strong>建立評估機制（How to Evaluate）：</strong>定義清晰的成長指標與評分系統，量化 AI 的表現進步，讓每次迭代都有可追蹤的改善證據。</div></li>
                 </ul>
             </div>
         </section>
