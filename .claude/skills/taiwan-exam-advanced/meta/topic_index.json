@@ -1,0 +1,191 @@
+{
+  "李白": {
+    "category": "chinese/classical",
+    "files": ["tangshi.md"],
+    "tags": ["詩人", "唐代", "浪漫主義", "謫仙人"],
+    "related": ["杜甫", "王維", "孟浩然"],
+    "keywords": ["將進酒", "靜夜思", "望廬山瀑布", "早發白帝城"]
+  },
+  "杜甫": {
+    "category": "chinese/classical",
+    "files": ["tangshi.md"],
+    "tags": ["詩人", "唐代", "寫實主義", "詩聖"],
+    "related": ["李白", "白居易"],
+    "keywords": ["春望", "登高", "茅屋為秋風所破歌"]
+  },
+  "詩經": {
+    "category": "chinese/classical",
+    "files": ["shijing.md"],
+    "tags": ["先秦", "詩歌總集", "賦比興", "風雅頌"],
+    "related": ["楚辭", "論語"],
+    "keywords": ["關雎", "蒹葭", "采薇", "碩鼠"]
+  },
+  "楚辭": {
+    "category": "chinese/classical",
+    "files": ["chuci.md"],
+    "tags": ["先秦", "屈原", "浪漫主義", "離騷"],
+    "related": ["詩經", "漢賦"],
+    "keywords": ["離騷", "天問", "九歌"]
+  },
+  "比喻": {
+    "category": "chinese/rhetoric",
+    "files": ["metaphor.md"],
+    "tags": ["修辭", "明喻", "暗喻", "借喻"],
+    "related": ["擬人", "轉化"],
+    "keywords": ["喻體", "喻依", "喻詞"]
+  },
+  "擬人": {
+    "category": "chinese/rhetoric",
+    "files": ["personification.md"],
+    "tags": ["修辭", "人格化", "物擬人"],
+    "related": ["比喻", "轉化"],
+    "keywords": ["感情移入", "具象化"]
+  },
+  "白話文學": {
+    "category": "chinese/modern",
+    "files": ["vernacular.md"],
+    "tags": ["五四運動", "胡適", "魯迅", "現代文學"],
+    "related": ["臺灣文學", "新詩"],
+    "keywords": ["狂人日記", "阿Q正傳", "嘗試集"]
+  },
+  "臺灣文學": {
+    "category": "chinese/modern",
+    "files": ["taiwan_lit.md"],
+    "tags": ["本土文學", "鄉土文學", "戰後文學"],
+    "related": ["白話文學", "原住民文學"],
+    "keywords": ["賴和", "楊逵", "鍾理和", "黃春明"]
+  },
+  "二二八事件": {
+    "category": "values/history",
+    "files": ["228.md", "transitional_justice.md"],
+    "tags": ["歷史事件", "1947", "轉型正義", "人權"],
+    "related": ["白色恐怖", "戒嚴", "民主化"],
+    "keywords": ["緝煙血案", "國家暴力", "真相調查", "國家道歉"]
+  },
+  "白色恐怖": {
+    "category": "values/history",
+    "files": ["white_terror.md", "transitional_justice.md"],
+    "tags": ["歷史事件", "1949-1987", "戒嚴", "政治迫害"],
+    "related": ["二二八事件", "轉型正義", "美麗島事件"],
+    "keywords": ["政治犯", "軍事審判", "言論自由", "平反"]
+  },
+  "轉型正義": {
+    "category": "values/history",
+    "files": ["transitional_justice.md", "228.md", "white_terror.md"],
+    "tags": ["人權", "民主深化", "歷史真相"],
+    "related": ["二二八事件", "白色恐怖", "促轉會"],
+    "keywords": ["真相", "責任", "賠償", "和解"]
+  },
+  "原住民族": {
+    "category": "values/culture",
+    "files": ["indigenous_rights.md", "multiculturalism.md"],
+    "tags": ["多元文化", "南島語系", "傳統領域", "族群正義"],
+    "related": ["轉型正義", "多元文化"],
+    "keywords": ["16族", "正名運動", "傳統領域", "文化復振"]
+  },
+  "多元文化": {
+    "category": "values/culture",
+    "files": ["multiculturalism.md"],
+    "tags": ["文化多樣性", "族群平等", "語言政策"],
+    "related": ["原住民族", "客家文化", "新住民"],
+    "keywords": ["四大族群", "母語教學", "文化平權"]
+  },
+  "臺灣史前時代": {
+    "category": "social/history",
+    "files": ["prehistoric.md", "indigenous.md"],
+    "tags": ["考古", "南島語族", "長濱文化", "十三行文化"],
+    "related": ["原住民史", "荷西時期"],
+    "keywords": ["舊石器時代", "新石器時代", "鐵器時代"]
+  },
+  "荷西時期": {
+    "category": "social/history",
+    "files": ["colonial.md"],
+    "tags": ["殖民歷史", "1624-1662", "荷蘭東印度公司", "西班牙"],
+    "related": ["史前時代", "鄭氏王朝"],
+    "keywords": ["熱蘭遮城", "普羅民遮城", "國際貿易"]
+  },
+  "清領時期": {
+    "category": "social/history",
+    "files": ["colonial.md"],
+    "tags": ["清朝統治", "1683-1895", "移民社會"],
+    "related": ["荷西時期", "日治時期"],
+    "keywords": ["渡臺禁令", "番界", "三年一反", "開港通商"]
+  },
+  "日治時期": {
+    "category": "social/history",
+    "files": ["colonial.md"],
+    "tags": ["日本殖民", "1895-1945", "現代化", "皇民化"],
+    "related": ["清領時期", "戒嚴時期"],
+    "keywords": ["武裝抗日", "文化啟蒙", "基礎建設", "皇民化運動"]
+  },
+  "戰後臺灣": {
+    "category": "social/history",
+    "files": ["authoritarian.md", "democratic.md"],
+    "tags": ["國民政府", "威權統治", "民主化"],
+    "related": ["二二八事件", "白色恐怖", "解嚴"],
+    "keywords": ["土地改革", "經濟奇蹟", "威權統治", "民主轉型"]
+  },
+  "臺灣地形": {
+    "category": "social/geography",
+    "files": ["topography.md"],
+    "tags": ["自然地理", "山脈", "平原", "盆地"],
+    "related": ["氣候", "水文"],
+    "keywords": ["中央山脈", "玉山", "濁水溪", "嘉南平原"]
+  },
+  "臺灣氣候": {
+    "category": "social/geography",
+    "files": ["climate.md"],
+    "tags": ["自然地理", "季風", "颱風", "降雨"],
+    "related": ["地形", "產業"],
+    "keywords": ["副熱帶季風", "梅雨", "颱風", "地形雨"]
+  },
+  "臺灣產業": {
+    "category": "social/geography",
+    "files": ["industry.md"],
+    "tags": ["經濟地理", "農業", "工業", "服務業"],
+    "related": ["氣候", "都市發展"],
+    "keywords": ["農業轉型", "加工出口區", "科學園區", "產業升級"]
+  },
+  "中華民國憲法": {
+    "category": "social/civics",
+    "files": ["constitution.md"],
+    "tags": ["憲政體制", "五權分立", "修憲"],
+    "related": ["政府體制", "基本權利"],
+    "keywords": ["五權憲法", "增修條文", "憲政改革"]
+  },
+  "基本權利": {
+    "category": "social/civics",
+    "files": ["rights.md"],
+    "tags": ["人權", "自由權", "平等權", "受益權"],
+    "related": ["憲法", "司法制度"],
+    "keywords": ["言論自由", "集會結社", "生存權", "工作權"]
+  },
+  "民主制度": {
+    "category": "social/civics",
+    "files": ["government.md", "democracy.md"],
+    "tags": ["政治制度", "選舉", "政黨政治"],
+    "related": ["憲法", "公民參與"],
+    "keywords": ["總統制", "內閣制", "直接選舉", "政黨輪替"]
+  },
+  "性別平等": {
+    "category": "values/society",
+    "files": ["gender_equality.md", "lgbtq_rights.md"],
+    "tags": ["人權", "女權", "同志權益", "性別主流化"],
+    "related": ["多元文化", "社會正義"],
+    "keywords": ["婦女新知", "同婚合法化", "性別平等教育法"]
+  },
+  "環境正義": {
+    "category": "values/society",
+    "files": ["environmental.md"],
+    "tags": ["永續發展", "環保運動", "氣候變遷"],
+    "related": ["勞工權益", "社會運動"],
+    "keywords": ["反公害運動", "核能爭議", "能源轉型"]
+  },
+  "太陽花學運": {
+    "category": "values/history",
+    "files": ["sunflower.md"],
+    "tags": ["社會運動", "2014", "公民參與", "兩岸關係"],
+    "related": ["野百合學運", "民主化"],
+    "keywords": ["服貿協議", "318運動", "公民不服從", "青年參政"]
+  }
+}
