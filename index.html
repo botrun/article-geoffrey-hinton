@@ -10,25 +10,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #FAFAFA;
+            /* 北歐風格配色：簡約、低調、設計感 */
+            --bg-primary: #F8F9FA;
             --bg-secondary: #FFFFFF;
-            --bg-tertiary: #F5F5F5;
-            --text-primary: #1A1A1A;
-            --text-secondary: #4A4A4A;
-            --text-muted: #8A8A8A;
-            --accent-blue: #2563EB;
-            --accent-indigo: #4F46E5;
-            --accent-emerald: #059669;
-            --accent-amber: #D97706;
-            --accent-rose: #E11D48;
-            --border-light: #E5E5E5;
-            --border-medium: #D4D4D4;
-            --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
-            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
-            --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
-            --radius-sm: 6px;
-            --radius-md: 12px;
-            --radius-lg: 20px;
+            --bg-tertiary: #F0F2F5;
+            --text-primary: #2C3E50;
+            --text-secondary: #5A6C7D;
+            --text-muted: #95A5A6;
+            --accent-blue: #5B8DB8;
+            --accent-indigo: #7986CB;
+            --accent-emerald: #6DAFA7;
+            --accent-amber: #C19A6B;
+            --accent-rose: #B98B8B;
+            --border-light: #E8EBF0;
+            --border-medium: #D1D8E0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.03);
+            --shadow-md: 0 4px 10px rgba(0,0,0,0.05);
+            --shadow-lg: 0 8px 20px rgba(0,0,0,0.06);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
         }
 
         * {
@@ -97,9 +98,9 @@
             color: var(--accent-indigo);
         }
 
-        /* Hero Section */
+        /* Hero Section - 北歐風格淡雅漸變 */
         .hero {
-            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #3730a3 100%);
+            background: linear-gradient(135deg, #4A6FA5 0%, #5B8DB8 50%, #7B9FB8 100%);
             color: white;
             padding: 6rem 2rem;
             position: relative;
@@ -363,7 +364,7 @@
         }
 
         .comparison-table th {
-            background: linear-gradient(135deg, #1e1b4b, #312e81);
+            background: linear-gradient(135deg, #5B8DB8, #7986CB);
             color: white;
             padding: 1rem 1.25rem;
             text-align: left;
@@ -466,9 +467,9 @@
             color: var(--text-primary);
         }
 
-        /* Footer */
+        /* Footer - 北歐風格 */
         .footer {
-            background: #1e1b4b;
+            background: #4A6FA5;
             color: white;
             padding: 4rem 2rem;
             margin-top: 4rem;
@@ -512,38 +513,213 @@
             opacity: 1;
         }
 
-        /* Responsive */
+        /* Responsive - 優化手機友善設計 */
+
+        /* 平板尺寸 (768px - 1024px) */
+        @media (max-width: 1024px) {
+            .main-content {
+                padding: 3rem 2rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        /* 手機橫向 & 小平板 (600px - 768px) */
         @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+                line-height: 1.7;
+            }
+
+            .header {
+                padding: 0.75rem 1.5rem;
+            }
+
             .header-inner {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0.75rem;
             }
 
             .nav-links {
                 gap: 1rem;
+                font-size: 0.9rem;
             }
 
             .hero {
-                padding: 4rem 1.5rem;
+                padding: 3rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+                line-height: 1.3;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
             }
 
             .hero-meta {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 1rem;
+                gap: 0.75rem;
             }
 
             .main-content {
-                padding: 2rem 1.5rem;
+                padding: 2rem 1.25rem;
+            }
+
+            .section {
+                margin-bottom: 3rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .section h3 {
+                font-size: 1.2rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            .code-block {
+                font-size: 0.85rem;
+                padding: 1rem;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .formula-block {
+                font-size: 0.95rem;
+                padding: 1rem;
+                overflow-x: auto;
             }
 
             .comparison-table {
-                font-size: 0.85rem;
+                font-size: 0.8rem;
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
             }
 
             .comparison-table th,
             .comparison-table td {
-                padding: 0.75rem;
+                padding: 0.75rem 0.5rem;
+            }
+
+            .strategy-card {
+                padding: 1.5rem;
+            }
+
+            .highlight-box {
+                padding: 1.5rem;
+            }
+        }
+
+        /* 小手機 (< 600px) */
+        @media (max-width: 600px) {
+            body {
+                font-size: 15px;
+            }
+
+            .header {
+                padding: 0.5rem 1rem;
+            }
+
+            .logo {
+                font-size: 1.1rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 0.75rem;
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                padding: 2.5rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .hero-badge {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .main-content {
+                padding: 1.5rem 1rem;
+            }
+
+            .section {
+                margin-bottom: 2.5rem;
+            }
+
+            .section-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .section h2 {
+                font-size: 1.35rem;
+            }
+
+            .card {
+                padding: 1.25rem;
+            }
+
+            .strategy-card {
+                padding: 1.25rem;
+            }
+
+            .strategy-number {
+                width: 28px;
+                height: 28px;
+                font-size: 0.85rem;
+            }
+
+            .highlight-box {
+                padding: 1.25rem;
+                margin: 1.5rem 0;
+            }
+
+            .code-block {
+                font-size: 0.8rem;
+                padding: 0.875rem;
+            }
+
+            .footer {
+                padding: 3rem 1rem;
+            }
+
+            .footer h3 {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* 極小螢幕 (< 400px) */
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.35rem;
+            }
+
+            .section h2 {
+                font-size: 1.2rem;
+            }
+
+            .cards-grid {
+                gap: 1rem;
             }
         }
 
@@ -701,6 +877,18 @@
                 「捨棄」在資訊理論中對應的是<strong>最小描述長度（Minimum Description Length, MDL）</strong>原則。
             </p>
 
+            <div class="highlight-box warning" style="margin: 1.5rem 0;">
+                <div class="highlight-box-header">
+                    <i data-lucide="message-circle" style="width:20px;height:20px;color:var(--accent-amber);"></i>
+                    大白話解釋
+                </div>
+                <p style="margin:0;">
+                    想像你要向朋友描述「如何煮一碗泡麵」。<strong>冗長版本</strong>會說：「先拿出鍋子，檢查鍋子是否乾淨，清洗鍋子，擦乾鍋子，放到爐子上，打開水龍頭，接水到鍋子裡...」（99% 的廢話）。
+                    <strong>精簡版本</strong>直接說：「煮水、泡麵、等3分鐘」（1% 的核心）。
+                    MDL 原則就是：<strong>用最短的方式描述事情的本質，去掉所有不必要的細節</strong>。AI 的智慧也一樣——會過濾掉雜訊，只保留真正的規則。
+                </p>
+            </div>
+
             <ul class="styled-list">
                 <li>
                     <i data-lucide="x-circle" style="width:20px;height:20px;"></i>
@@ -735,6 +923,34 @@
                         <div><strong>模型端（Sparsity）：</strong>使用稀疏模型（Sparse Models）或混合專家模型（MoE），每次推論只激活大腦中極小一部分最相關的神經元。</div>
                     </li>
                 </ul>
+            </div>
+
+            <div class="highlight-box insight" style="margin-top: 2rem; border-left: 4px solid var(--accent-blue);">
+                <div class="highlight-box-header">
+                    <i data-lucide="terminal" style="width:20px;height:20px;color:var(--accent-blue);"></i>
+                    Claude Code Meta Prompt 示範：高品質數據過濾
+                </div>
+                <div class="code-block" style="margin-top: 1rem; background: #1a1b26;">
+<span class="comment"># 💎 數據品質過濾 Prompt（藍色框 - 數據端應用）</span>
+
+你是一個專注於<span class="keyword">高品質數據篩選</span>的 AI 助手。
+
+<span class="keyword">核心原則：</span>
+- 只保留「教科書等級」的範例程式碼
+- 捨棄 99% 的平庸實作，只學習 1% 的最佳實踐
+- 優先參考：官方文檔、知名開源專案的核心模組、技術書籍範例
+
+<span class="keyword">執行指令：</span>
+當我要求你實作功能時，請：
+1. 先搜尋專案中現有的「最佳範例」（透過 MCP）
+2. 分析這些範例的共同模式
+3. 只基於這些高品質範例來生成新程式碼
+4. <span class="string">拒絕參考</span>任何低品質或過時的程式碼片段
+
+<span class="keyword">輸出格式：</span>
+- 先說明參考了哪些高品質範例
+- 再輸出符合這些範例風格的程式碼
+                </div>
             </div>
         </section>
 
@@ -821,6 +1037,45 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="highlight-box success" style="margin-top: 2rem; border-left: 4px solid var(--accent-emerald);">
+                <div class="highlight-box-header">
+                    <i data-lucide="terminal" style="width:20px;height:20px;color:var(--accent-emerald);"></i>
+                    Claude Code Meta Prompt 示範：自我驗證機制
+                </div>
+                <div class="code-block" style="margin-top: 1rem; background: #1a1b26;">
+<span class="comment"># 🎯 自我驗證 Prompt（綠色框 - 驗證器應用）</span>
+
+你是一個具備<span class="keyword">自我驗證能力</span>的 AI 程式設計助手。
+
+<span class="keyword">核心機制：</span>
+在輸出最終程式碼前，必須執行「三層驗證」：
+
+<span class="keyword">第一層：邏輯驗證</span>
+- 列出 3 種可能的邊界情況
+- 檢查是否所有分支都有處理
+- 確認沒有遺漏的錯誤處理
+
+<span class="keyword">第二層：效能驗證</span>
+- 分析時間複雜度是否最優
+- 檢查是否有不必要的記憶體分配
+- 確認熱路徑 (hot path) 沒有昂貴操作
+
+<span class="keyword">第三層：風格驗證</span>
+- 對照專案現有程式碼風格
+- 確認命名規範一致性
+- 檢查是否符合團隊慣例
+
+<span class="keyword">輸出格式：</span>
+<span class="string">【驗證報告】</span>
+✓ 邏輯驗證：已處理 X 種邊界情況
+✓ 效能驗證：時間複雜度 O(n)，無額外分配
+✓ 風格驗證：符合專案 snake_case 命名規範
+
+<span class="string">【最終程式碼】</span>
+（經過三層驗證的程式碼）
+                </div>
+            </div>
         </section>
 
         <div class="divider"></div>
@@ -902,6 +1157,41 @@
 
                 <div class="highlight-box success" style="margin-top:1rem;">
                     <p style="margin:0;"><strong>壓縮哲學：</strong>建立一個與世隔絕的「無菌室」，確保輸入模型的參考資料都是無損壓縮的智慧。</p>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 1.5rem; border-left: 4px solid var(--accent-indigo); background: linear-gradient(135deg, #EEF2FF 0%, #FFFFFF 100%);">
+                    <div class="highlight-box-header">
+                        <i data-lucide="terminal" style="width:20px;height:20px;color:var(--accent-indigo);"></i>
+                        Claude Code Meta Prompt 示範：MCP 黃金知識庫查詢
+                    </div>
+                    <div class="code-block" style="margin-top: 1rem; background: #1a1b26;">
+<span class="comment"># 👑 MCP 黃金知識庫 Prompt（紫色框 - MCP 應用）</span>
+
+你是連接到<span class="keyword">精選知識庫</span>的 AI 助手，透過 MCP 存取頂級範例。
+
+<span class="keyword">工作流程：</span>
+
+<span class="keyword">步驟 1：需求分析</span>
+收到程式需求後，先分析所需的核心模式（如：API 設計、錯誤處理、並發控制）
+
+<span class="keyword">步驟 2：MCP 查詢</span>
+使用 <span class="function">search_best_practices</span>(domain=<span class="string">"rust-concurrency"</span>, quality=<span class="string">"expert"</span>)
+只檢索經過 Code Review ⭐️ 5.0 的黃金範例
+
+<span class="keyword">步驟 3：模式萃取</span>
+從 3-5 個最佳範例中，提取：
+- 共同的架構模式
+- 一致的命名規範
+- 標準的錯誤處理策略
+
+<span class="keyword">步驟 4：生成程式碼</span>
+基於萃取的模式，生成符合「頂級水準」的程式碼
+
+<span class="keyword">禁止事項：</span>
+❌ 不可參考訓練資料中的一般程式碼
+❌ 不可自行發明未經驗證的模式
+✅ 只能基於 MCP 黃金知識庫的範例
+                    </div>
                 </div>
             </div>
 
@@ -990,6 +1280,19 @@
                 Transformer 本質上不是在做「分類」（這是貓、那是狗），而是在做<strong>「高維空間的向量定位」</strong>。
             </p>
 
+            <div class="highlight-box warning" style="margin: 1.5rem 0;">
+                <div class="highlight-box-header">
+                    <i data-lucide="message-circle" style="width:20px;height:20px;color:var(--accent-amber);"></i>
+                    大白話解釋
+                </div>
+                <p style="margin:0;">
+                    想像一個巨大的「意義地圖」，每個詞都是地圖上的一個點。<strong>「貓」跟「狗」在地圖上很近</strong>（因為都是寵物），
+                    <strong>「國王」跟「皇后」也很近</strong>（因為都是君主）。Transformer 不是死記硬背「貓是動物」，
+                    而是學會：「當我看到『貓』這個座標，附近通常會有『寵物』、『毛茸茸』、『喵喵叫』這些座標」。
+                    就像 GPS 導航一樣——給你目前位置，它就知道附近會有什麼。
+                </p>
+            </div>
+
             <div class="cards-grid">
                 <div class="card">
                     <div class="card-icon indigo">
@@ -1025,6 +1328,18 @@
                 用物理學的話說：詞彙在沒有上下文時，處於<strong>「語意疊加態」</strong>。
                 而當上下文出現時，Attention 機制會計算相關性，導致<strong>「波函數坍縮」</strong>。
             </p>
+
+            <div class="highlight-box success" style="margin: 1.5rem 0;">
+                <div class="highlight-box-header">
+                    <i data-lucide="message-circle" style="width:20px;height:20px;color:var(--accent-emerald);"></i>
+                    大白話解釋
+                </div>
+                <p style="margin:0;">
+                    就像你在看偵探小說，一開始看到「May 去了銀行」，你不確定 May 是人名還是五月。<strong>這時你的大腦處於「薛丁格的貓」狀態</strong>——兩種可能性同時存在。
+                    但當你繼續讀到「她穿著夏天的衣服，因為天氣漸漸熱起來」，你的大腦瞬間「坍縮」——<strong>May 是五月！機率從 50% 直接跳到 95%</strong>。
+                    AI 的 Attention 機制就是這樣工作的：一開始什麼都可能，看到更多線索後，瞬間鎖定正確答案。
+                </p>
+            </div>
         </section>
 
         <div class="divider"></div>
@@ -1144,6 +1459,48 @@
                     <span class="score-badge"><i data-lucide="star" style="width:14px;height:14px;"></i> 8.5 / 10</span>
                 </div>
             </div>
+
+            <div class="highlight-box warning" style="margin-top: 2rem; border-left: 4px solid var(--accent-amber);">
+                <div class="highlight-box-header">
+                    <i data-lucide="terminal" style="width:20px;height:20px;color:var(--accent-amber);"></i>
+                    Claude Code Meta Prompt 示範：數據驅動學習
+                </div>
+                <div class="code-block" style="margin-top: 1rem; background: #1a1b26;">
+<span class="comment"># 🧬 數據驅動學習 Prompt（橘色框 - AlexNet 啟示應用）</span>
+
+你是一個<span class="keyword">數據驅動</span>的 AI 助手，從實際程式碼中學習，而非從規則中學習。
+
+<span class="keyword">核心原則：讓數據自己說話</span>
+
+<span class="keyword">任務執行流程：</span>
+
+<span class="number">1.</span> <span class="keyword">掃描歷史提交（Git History Mining）</span>
+   git log --all --format='%H' --since=<span class="string">"6 months ago"</span> |
+   分析最近 50 個 commit 的程式碼模式
+
+<span class="number">2.</span> <span class="keyword">自動歸納規則</span>
+   不是我告訴你「用 snake_case」
+   而是你發現：98% 的函數都用 snake_case → 自動學習這個規範
+
+<span class="number">3.</span> <span class="keyword">提取共同模式</span>
+   - 錯誤處理：團隊偏好 Result&lt;T, E&gt; 還是 Option&lt;T&gt;？
+   - API 設計：REST endpoint 命名規則？
+   - 測試風格：Given-When-Then 還是 Arrange-Act-Assert？
+
+<span class="number">4.</span> <span class="keyword">基於模式生成</span>
+   新程式碼必須「看起來像是同一個人寫的」
+
+<span class="keyword">輸出範例：</span>
+<span class="string">【自動學習報告】</span>
+✓ 分析了 50 個提交
+✓ 發現命名規範：snake_case (98%)
+✓ 發現錯誤處理：Result&lt;T, ApiError&gt; (95%)
+✓ 發現測試模式：Given-When-Then (100%)
+
+<span class="string">【生成程式碼】</span>
+（完全符合歷史模式的新程式碼）
+                </div>
+            </div>
         </section>
 
         <div class="divider"></div>
@@ -1167,6 +1524,19 @@
             </div>
 
             <p>這證明了：<strong>智慧在參數空間中是可以線性疊加的。</strong></p>
+
+            <div class="highlight-box insight" style="margin: 1.5rem 0;">
+                <div class="highlight-box-header">
+                    <i data-lucide="message-circle" style="width:20px;height:20px;color:var(--accent-indigo);"></i>
+                    大白話解釋
+                </div>
+                <p style="margin:0;">
+                    想像你有三個超級廚師：<strong>A 廚師專精日本料理</strong>、<strong>B 廚師專精法國料理</strong>、<strong>C 廚師專精中華料理</strong>。
+                    模型合併就像是把這三個廚師的「技能包」混合在一起，創造出一個<strong>「全能廚神」</strong>——既會做壽司、又會做法式甜點、還會做宮保雞丁！
+                    神奇的是，這個過程不需要重新學習，只要把他們的「技能參數」加起來就好了。就像混合顏料一樣：紅色 + 藍色 = 紫色，
+                    日料專家 + 法餐專家 = 日法融合專家。
+                </p>
+            </div>
 
             <!-- Merging Strategy 1 -->
             <div class="strategy-card">
